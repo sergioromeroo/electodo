@@ -1,0 +1,294 @@
+/* header */
+/* header{
+    background: linear-gradient(to bottom right, var(--color-rosaFluor) 10%, var(--color-azulOscuro) 65%);
+    background-image:
+    radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
+    radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
+    radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px),
+    radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 30px);
+    background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+    background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+} */
+
+header{
+    background-image: url('/img/curls.png');
+    position: fixed;
+    z-index: 50;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    margin: 0;
+}
+
+.cabeza{
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.buscador2{
+    display: none;
+}
+
+.logo a img{
+    width: 70px;
+    display: flex;
+}
+
+.buscador{
+    display: flex;
+    border: 3px solid rgb(168, 168, 168);
+    border-radius: 2em;
+    align-items: center;
+    height: 40px;
+}
+
+.buscar-texto:focus{
+    outline: none;
+}
+
+.buscar-texto{
+    border: none;
+    background: none;
+    color: rgb(168, 168, 168);
+    font-size: 16px;
+    width: 40vw;
+    padding-left: 10px;
+    font-family: Play;
+}
+
+.boton{
+    background: none;
+    border-radius: 0 1em 1em 0;
+    border: none;
+    width: 2em;
+    height: 2.5em;
+    text-decoration: none;
+}
+
+.nav-header-menu ul li{
+    list-style: none;
+    float: left;
+    margin: 10px
+}
+
+.nav-header-items{
+    background: linear-gradient(to right, var(--color-celesteClaro), var(--color-rosaFluor), var(--color-azulOscuro));
+    width: 100%;
+    padding: 2px;
+}
+
+.nav-header-items i{
+    font-size: 1em;
+}
+
+.nav-header-items a{
+    font-family: Play;
+}
+
+.nav-header-items2{
+    display: none;
+}
+
+.nav-header-items ul{
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav-header-items ul li{
+    list-style: none;
+    float: left;
+    text-align: center;
+}
+
+.nav-header-items ul li a{
+    color: #fff;
+    list-style: none;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+/* -----------DESPLEGRABLE-------------- */
+
+.color-boton-caca{
+    background-color: rgba(0, 0, 0, 0.1);
+    border: none;
+    outline: none;
+}
+
+.color-boton-caca:hover{
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: 0.3s;
+}
+
+.color-menu-caca{
+    /* background: rgb(221, 221, 221); */
+    background-image: url('/img/moroccan-flower.png');
+}
+.dropdown-item{
+    color: rgb(31, 31, 31);
+    font-family: Play;
+}
+
+button:focus:not(:focus-visible){
+    background-color: rgba(0, 0, 0, 0.1);
+    border: none;
+    outline: none;
+}
+
+
+
+
+@media (max-width: 769px) {
+
+    /* header */
+
+    .buscador2{
+        display: none;
+    }
+
+    .buscar-texto{
+        width: auto;
+    }
+    .nav-header-menu2{
+        display: none;
+    }
+    .nav-header-items2{
+        display: none;
+    }
+    .nav-header-items ul li a i{
+        display: none;
+    }
+
+}
+
+@media (max-width: 481px) {
+    
+    /* header */
+
+    .cabeza{
+        justify-content: space-around;
+        padding: 30px;
+    }
+
+    .buscador{
+        display: none;
+    }
+
+    .buscador2{
+        display: flex;
+    }
+
+    .buscador2:hover > .buscar-texto2{
+        width: 130px;
+    }
+
+    .buscar-texto2{
+        border: none;
+        background: var(--color-celesteClaro);
+        color: #fff;
+        outline: none;
+        font-size: 1.5em;
+        width: 0;
+        float: left;
+        line-height: 60px;
+        transition: .3s;
+        border-radius: 15px 15px 15px 15px;
+    }
+
+    .buscador2 .fa-search{
+        background: none;
+        color: white;
+        font-size: 2em;
+        margin-left: 10px;
+    }
+
+    .boton-busc{
+        display: flex;
+        align-items: center;
+    }
+
+    .nav-header-menu{
+        display: none;
+    }
+
+    .nav-header-menu2{
+        display: flex;
+        align-items: center;
+    }
+
+    .nav-header-menu2 ul{
+        display: flex;
+        justify-content: space-evenly;
+        width: 130px;
+        padding: 0;
+    }
+
+    .nav-header-menu2 ul{
+        margin: 0;
+    }
+
+    .nav-header-menu2 ul li{
+        list-style: none;
+    }
+
+    .nav-header-menu2 ul li a i.fas{
+        font-size: 2em;
+    }
+
+    .nav-header-items{
+        display: none;
+    }
+
+    .nav-header-items2{
+        display: flex;
+        justify-content: space-evenly;
+        background: linear-gradient(to right, var(--color-celesteClaro), var(--color-rosaFluor), var(--color-azulOscuro));
+        height: 50px;
+        padding: 20px;
+        align-items: center;
+    }
+    .dropdown-menu{
+        background: linear-gradient(to right, var(--color-celesteClaro), var(--color-rosaFluor), var(--color-azulOscuro));
+    }
+    .btn-secondary{
+        background: linear-gradient(to right, var(--color-celesteClaro), var(--color-rosaFluor));
+    }
+
+    .nav-header-items2 li a{
+        color: #fff;
+        text-decoration: none;
+        padding: 10px 15px;
+        display: block;
+    }
+
+    .nav-header-items2 li a:hover{
+        color: var(--color-rosaFluor);
+    }
+
+    .nav-header-items2 ul{
+        overflow: hidden;
+    }
+
+    .nav-header-items2 ul li {
+        float: left;
+    }
+
+    .nav-header-items2 .fas{
+        font-size: 2em;
+    }
+
+    .nav-header-items2 .burger-menu button{
+        border: none;
+        background: none;
+    }
+
+}
